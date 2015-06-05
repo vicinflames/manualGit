@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <style>
+            body{
+                font:15px sans;
+                background:#A9E2F3;
+            }
+
+            #contenedor{
+            	
+                min-height:800px;
+                margin:0;
+                padding:0;
+                display:flex; display:-webkit-flex;
+                flex-flow:row; -webkit-flex-flow:row;
+            }
+            #contenedor article{
+            	 overflow: hidden;
+                margin:5px;
+                padding:15px;
+                border:2px solid gray;
+                border-radius:10px;
+                background:white;
+                flex:3 1 60%; -webkit-flex:3 1 60%;
+                order:2; -webkit-order:2;
+            }
+            #contenedor nav{
+                margin:5px;
+                padding:15px;
+                border:0px solid gray;
+                background:##A9E2F3;
+                flex:1 6 20%; -webkit-flex:1 6 20%;
+                order:1; -webkit-order:1;
+            }
+            #contenedor aside{
+                margin:5px;
+                padding:15px;
+                border:0px ;
+                background:##A9E2F3;
+                flex:1 6 20%; -webkit-flex:1 6 20%;
+                order:3; -webkit-order:3;
+            }
+            header{ 
+                display:block;
+                margin:5px;
+                padding:15px;
+                text-align:center;
+                min-height:60px;
+                border:0px solid gray;
+                background:##A9E2F3;
+            }
+             footer{
+                display:block;
+                margin:5px;
+                padding:15px;
+                text-align:center;
+                min-height:60px;
+                border:2px solid gray;
+                border-radius: 10px;
+                background:#58ACFA;
+                
+
+             }
+
+
+            header h1{
+                margin:0px;
+                font-size:1.5em;
+            }
+            @media all and (max-width: 640px){
+                #contenedor, #page{
+                    flex-flow:column; -webkit-flex-flow:column;
+                }
+                #contenedor article, #contenedor nav, #contenedor aside{
+                    order:0; -webkit-order:0;
+                }
+                #contenedor nav, #contenedor aside, header, footer{
+                    min-height: 30px;
+                    max-height: 30px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Manual Básico Git</h1>
+        </header>
+        <div id="contenedor">
+            <article>
+                <p><b>1.</b>-Como primer paso debemos inicializar git y añadir un repositorio
+
+                   git init
+                  </p>
+                   <img src="img/git1.png"> 
+
+
+                    <p><b>2.</b>-Ahora que ya disponemos de un repositorio,comprobamos el estado de este
+
+                    git status
+                    </p>
+                     <img src="img/git2.png">
+
+                    <p> <b>3.</b>-Creamos un archivo de prueba.
+                     </p>
+
+                    <p><b>4.</b>- Utilizamos el comando git status para comprobar y descubrir la aparición de nuestro nuevo archivo
+                    </p>
+                    <img src="img/git3.png">
+
+                   <p></p> <b>5.</b>Ahora debemos añadir el archivo al “stage area”
+
+                    git add “nombreDelArchivo”
+                    </p>
+                    <img src="img/git4.png">
+
+                   <p> <b>6.</b>volvemos a comprobar con git status,la ausencia del archivo en el directorio principal
+                   </p>
+                   <img src="img/git5.png">
+
+
+
+                    <p><b>7.</b>Con los archivos terminados,podemos utilizar git commit -m “nombre del proyecto”  para añadirlos al repositorio final,donde serán utilizados
+                   </p>
+                    <img src="img/git6.png">
+
+                  <P><b>8.</b>Si queremos añadir varios archivos de la misma extensión,podemos utilizar 
+                    git add *.”extensión”  y después añadirlos al stage como paquete,
+                    git commit -m “todos los textos”</P>
+                     <img src="img/git8.png"> 
+
+
+
+                    <p><b>9</b>.Es posible consultar todos los cambios realizados,gracias a git log</p>
+                    <img src="img/git9.png"> 
+
+                   <p><b>10.</b>Si es deseamos organizar nuestros archivos en diferentes lugares,podemos crear nuevas ramas.</p>
+                   <p>La rama por defecto en GIT, es la "Master".
+                   Para crear una nueva u organizar las ya existentes,deberemos utilizar el comando "Branch".</p>
+                   <p>Con <b>"git branch"</b>,podemos visualizar las ramas existentes,y con <b>"git branch 'nombrederama' "</b> crear una nueva.
+                    <img src="img/git10.png"> 
+                     <img src="img/git11.png"> 
+                 	   <p><b>11.</b>Si tenemos varios archivos con el mismo nombre,pero uno de ellos,mas reciente,contiene cambios,podemos compararlos con "git diff 'nombreDelArchivo' "</p>
+
+
+                 	   <p><b>12.</b>   
+
+                 	   	Si deseamos movernos a una rama:
+
+                 	   <b>git checkout [nombreDeLaRama]</b></p>
+                 	   <img src="img/git12.png"> 
+
+                 	   <p><b>13.</b> Si lo que queremos es obtener el contenido de una rama: <b>git merge [nombreDeLaRama]</b></p>
+                 	   <img src="img/git13.png"> 
+
+
+            </article>
+            <nav></nav>
+            <aside></aside>
+        </div>
+        <footer>Autor: Víc Maree</footer>
+    </body>
+</html>

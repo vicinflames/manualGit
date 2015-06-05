@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<style>
+	body{
+		font:22px sans;
+		background:white;
+	}
+	
+	#contenedor{
+		min-height:800px;
+		margin:0;
+		padding:0;
+		display:flex; display:-webkit-flex;
+		flex-flow:row; -webkit-flex-flow:row;
+	}
+	#contenedor article{
+		margin:5px;
+		padding:15px;
+		border:2px solid gray;
+		border-radius:10px;
+		background:white;
+		flex:3 1 60%; -webkit-flex:3 1 60%;
+		order:2; -webkit-order:2;
+	}
+
+	#contenedor aside{
+		margin:5px;
+		padding:15px;
+		border:2px solid gray;
+		border-radius:10px;
+		background:#477AC2;
+		flex:1 6 9%; -webkit-flex:1 6 9%;
+		order:3; -webkit-order:3;
+		overflow: hidden;
+	}
+	header, footer{
+		display:block;
+		margin:5px;
+		padding:15px;
+		text-align:center;
+		min-height:60px;
+		border:2px solid gray;
+		border-radius: 3px;
+		background:#477AC2;
+	}
+	header h1{
+		margin:0px;
+		font-size:2.5em;
+		color: white;
+		bold;
+	}
+	@media all and (max-width: 640px){
+		#contenedor, #page{
+			flex-flow:column; -webkit-flex-flow:column;
+		}
+		#contenedor article, #contenedor, #contenedor aside{
+			order:0; -webkit-order:0;
+		}
+		#contenedor aside, header, footer{
+			min-height: 30px;
+			max-height: 30px;
+		}
+	}
+		</style>
+	</head>
+<body style="font-family:Arial, helvetica, sans-serif; font-size:16pt;
+            background-color:#EEEEEE">
+
+	<header>
+		<h1>Manual Básico de GIT</h1>
+	</header>
+	
+	<div id="contenedor">
+	
+		<article>
+		<p>- En primer lugar si queremos utilizar las funciones que nos ofrece GIT,
+		podremos instalarlo con la terminal, introduciendo el comando: <b>apt-get install git</b>.</p>
+		
+		<p>- Una vez ya tengamos disponible el programa, crearemos una carpeta donde realizaremos todas las tareas que requerirán el uso de git. 
+		Luego dentro de la carpeta introduciremos el comando <b>git init</b> que no inicializara git dentro de la carpeta creada.</p>
+		
+		<p>- Cuando tengamos algunos archivos creados dentro de la carpeta inicializada, puede que nos interese ver el estado en el que están, 
+		por lo tanto usaremos el comando <b>git status</b>.</p>
+		
+		<p>- Luego en el momento de que tengamos archivos terminados, antes de iniciar el seguimiento de los cambios realizados, primero tendremos
+		que añadirlo a la zona de espera utilizando <b>git add</b>. También podemos generalizar para no tener que añadir archivo uno por uno, por 
+		ejemplo: <b>git add '*.html'</b>. </p>
+		
+		
+		<p>- Al haber realizado un git add los archivos estarán en el 'Staging Area' (área de ensayo) y aún no los tendremos en nuestro repositorio. 
+		Para guardar nuestros cambios escalonados pondremos el comando <b>git commit -m</b> con un mensaje que describa lo que hemos cambiado dentro de
+		 comillas.</p>
+		 
+		 <p>- Una vez realizado unas cuantas confirmaciones, podremos navegar para ver lo que hemos cambiado. Es como un diario que recuerda todos los 
+		 cambios que hemos comprometidos hasta el momento en su respectivo orden. Para ver eso ejecutaremos el comando <b>git log</b>.</p>
+		 
+		 <p>- Si queremos tener un nuevo repositorio en GitHub usaremo <b>Git Try</b>. Y para usarlo, tendremos que añadir un repositorio remoto, con
+		 un comando que empezara por <b>git remote</b>, un nombre remoto y una URL del repositorio. Por ejemplo: 
+		 <b>git remote add origen https://github.com/try-git/try_git.git</b>.</p>
+		 
+		 <p>- Cuando tu proyecto se encuentra en un estado que quieres compartir, tienes que enviarlo a un repositorio remoto. El comando que te 
+		 permite hacer esto es: <b>git push [alias] [branch]</b>.</p>
+		 
+		 <p>- Y para comprobar si han hecho cambios en nuestro repositorio GitHub es el comando: <b>git pull</b>. Un ejemplo claro es el siguiente: <b>git pull origin master</b>.</p>
+		 
+		 <p>- Otro comando útil que tiene git es que puedes ver las modificaciones que ha habido respecto a la ultima vez. El comando que permite hacer
+		 esto es: <b>git diff --staged</b>.</p>
+		 
+		 <p>Para retirar archivos que se han añadido en git se usa: <b>git reset [file]</b>.</p>
+		 
+		 <p>Pero <b>git reset</b> no quita el archivo del todo, simplemente no lo podemos visualizar. Por eso los archivos se pueden cambiar de nuevo a la
+		 forma en que estaban en la ultima confirmación mediante el comando: <b>git checkout -- [destino]</b>.</p>
+		 
+		</article>
+
+		<aside><img src="img/github-logo-1.png" WIDTH=300 HEIGHT=320></aside>
+		
+	</div>
+	
+	<footer><p><b>Autor:</b> Joan Viver Bergas</p></footer>
+	
+</body>
+</html>

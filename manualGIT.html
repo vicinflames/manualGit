@@ -100,14 +100,15 @@
 		 <p>- Una vez realizado unas cuantas confirmaciones, podremos navegar para ver lo que hemos cambiado. Es como un diario que recuerda todos los 
 		 cambios que hemos comprometidos hasta el momento en su respectivo orden. Para ver eso ejecutaremos el comando <b>git log</b>.</p>
 		 
-		 <p>- Si queremos tener un nuevo repositorio en GitHub usaremo <b>Git Try</b>. Y para usarlo, tendremos que añadir un repositorio remoto, con
+		 <p>- Si queremos tener un nuevo repositorio en GitHub usaremos <b>Git Try</b>. Y para usarlo, tendremos que añadir un repositorio remoto, con
 		 un comando que empezara por <b>git remote</b>, un nombre remoto y una URL del repositorio. Por ejemplo: 
 		 <b>git remote add origen https://github.com/try-git/try_git.git</b>.</p>
 		 
 		 <p>- Cuando tu proyecto se encuentra en un estado que quieres compartir, tienes que enviarlo a un repositorio remoto. El comando que te 
 		 permite hacer esto es: <b>git push [alias] [branch]</b>.</p>
+		 <p>- Y para comprobar si han hecho cambios en nuestro repositorio GitHub es el comando: <b>git pull</b>. Un ejemplo claro es el siguiente: 
+		 <b>git pull origin master</b>.</p>
 		 
-		 <p>- Y para comprobar si han hecho cambios en nuestro repositorio GitHub es el comando: <b>git pull</b>. Un ejemplo claro es el siguiente: <b>git pull origin master</b>.</p>
 		 
 		 <p>- Otro comando útil que tiene git es que puedes ver las modificaciones que ha habido respecto a la ultima vez. El comando que permite hacer
 		 esto es: <b>git diff --staged</b>.</p>
@@ -116,6 +117,19 @@
 		 
 		 <p>Pero <b>git reset</b> no quita el archivo del todo, simplemente no lo podemos visualizar. Por eso los archivos se pueden cambiar de nuevo a la
 		 forma en que estaban en la ultima confirmación mediante el comando: <b>git checkout -- [destino]</b>.</p>
+		 
+		 <p>También podemos crear copias locales del repositorio que estamos ejecutando con <b>git clone /path/to/repository</b> y si utilizas un servidor 
+		 remoto, ejecutamos <b>git clone username@host:/path/to/repository</b></p>
+		 
+		 <p>Con <b>git checkout</b> podemos crear o cambiar a otra rama añadiendo <b>-b</b> y con <b>git branch</b> podemo ver o borrar una rama utilizando
+		 el parámetro <b>-d</b>.</p>
+		 
+		 <p><b>Git rm</b> elimina archivos desde el árbol de trabajo y del índice.</p>
+		 
+		 <p>Podemos fusionar distintas ramas en una con <b>git merge</b> y el nombre de la rama.</p>
+		 
+		 <p>En caso de que queramos ver los cambios que se han hecho con el tiempo en una determinada rama usaremos el comando <b>git k</b> y se nos
+		 abrirá una ventana para poderlo en modo gráfico.</p>
 		 
 		</article>
 
